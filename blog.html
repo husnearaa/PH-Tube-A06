@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- tailwind and daisyul  -->
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="container mx-auto mt-20 bg-green-300 p-20">
+        <h2 class="text-2xl font-semibold">1. Discuss the scope of var, let, and const</h2>
+        <p>Answer: <br> var <br>
+            var variable is functional scope.It can be updated and re-declared into the scope.
+            It can be declared without initialization.It can be accessed without 
+            initialization as its default value is “undefined”.
+        </p>
+        <p><br> let <br> 
+           let variable is block scope.It can be updated but cannot be re-declared into the scope.
+           It can be declared without initialization.It cannot be accessed without
+           initialization otherwise it will give 'referenceError'.
+            
+            
+        </p>
+        <p><br> const <br>
+           const variable is block scope.It cannot be updated or re-declared into the scope.
+           It cannot be declared without initialization.It cannot be accessed without initialization, 
+           as it cannot be declared without initialization.
+           
+        </p> <br>
+        <h2 class="text-2xl font-semibold">2.Tell us the use cases of null and undefined</h2>
+        <p>Answer: <br> Null <br>
+            Null means an empty or non-existent value. Null is assigned, and explicitly means nothing.
+            null is also an object.<br><br>
+            Example:<br> 
+            var test1 = null;<br>
+            console.log(test1);<br>
+            // null
+        </p>
+        <p><br>Undefined<br> 
+            Undefined means a variable has been declared, but the value of that variable has not yet been defined.
+            undefined is of type undefined. <br><br>
+            Example:<br>
+            var test2; <br>
+            console.log(test2); <br>
+            // undefined
+
+        </p><br>
+        <h2 class="text-2xl font-semibold">3. What do you mean by REST API?</h2>
+        <p>Answer: <br>
+            REST API is an interface that two computer systems use to exchange information securely over the internet. 
+            It is an architectural style characterized by client-server separation, HTTP interface, and statelessness.
+            It allows for platforms and systems written in different programming languages to interact with one another.
+            For example, a client application written in C# can interact with an API server written in Java.
+
+        </p>
+    </div>
+</body>
+</html>
