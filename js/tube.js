@@ -28,14 +28,26 @@ const handleLoadCategory = async (categoryId) => {
     const data = await response.json();
     console.log(data.data);
     const cardContainer = document.getElementById('card-container');
+
+
+    const hiddenDiv = document.getElementById('hiddenDiv')
+    if(data.data.length === 0){
+        hiddenDiv.classList.remove('hidden')
+    }
+    else{
+        hiddenDiv.classList.add('hidden')
+    }
+
+
     cardContainer.innerHTML = "";
     data.data?.forEach((songs) => {
+
         // console.log(songs);
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card bg-base-100 shadow-xl mb-8 ">
+        <div class="  bg-base-100 shadow-xl mb-8 ">
             <figure>
-            <img class="h-40 w-80"
+            <img class="h-40 w-80  rounded-lg"
                 src=${songs?.thumbnail}
                 alt="Songs"
             />
