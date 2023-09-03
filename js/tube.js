@@ -28,36 +28,35 @@ const handleLoadCategory = async (categoryId) => {
     const data = await response.json();
     console.log(data.data);
     const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML = ""
+    cardContainer.innerHTML = "";
     data.data?.forEach((songs) => {
         // console.log(songs);
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card  bg-base-100 shadow-xl">
+        <div class="card bg-base-100 shadow-xl mb-8 ">
             <figure>
-            <img
+            <img class="h-40 w-80"
                 src=${songs?.thumbnail}
                 alt="Songs"
             />
             </figure>
             <div class="card-body">
-                <h2 class="card-title">
-                    <div>
-                        <div class="w-14 rounded-full">
-                        <img
-                            src=${songs?.authors[0].profile_picture}
-                        />
-                        </div>
-                    </div>
+                <h2 class="card-title text-base">
+                    <img class="rounded-full h-10 w-10"
+                        src=${songs?.authors[0].profile_picture}
+                    />
                     ${songs?.title}
                 </h2>
                 <div>
-                    <p class="pl-16 flex gap-4">
-                        ${songs?.authors[0].profile_name} <img class="h-5 w-5" src= "./images/verified.png" ${songs?.authors[0]?.verified[true]}>
-                    </p>
-                </div>
-                    <p class="px-16">
-                        ${songs.others?.views}
+                  
+
+                 <div class=" class="pl-16 flex  gap-4"">
+                   <p class="pl-12 flex flex-left gap-2 text-sm" >
+                     ${songs?.authors[0].profile_name} 
+                     ${songs?.authors[0]?.verified?'':'<img class="h-5 w-5" src="./images/verified.png">'}
+                  </p>
+                    <p class="px-12">
+                        ${songs.others?.views} views
                     </p>
            </div>
      </div>
@@ -71,3 +70,4 @@ const handleLoadCategory = async (categoryId) => {
 
 
 handleCategory ();
+handleLoadCategory(1000);
