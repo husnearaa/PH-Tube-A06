@@ -47,7 +47,7 @@ const handleLoadCategory = async (categoryId) => {
         div.innerHTML = `
         <div class="  bg-base-100 shadow-xl mb-8 ">
             <figure>
-            <img class="h-40 w-80  rounded-lg"
+            <img class="h-40 w-80 rounded-lg"
                 src=${songs?.thumbnail}
                 alt="Songs"
             />
